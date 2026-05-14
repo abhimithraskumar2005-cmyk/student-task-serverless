@@ -19,6 +19,11 @@
 ```text
 TABLE_NAME=StudentTasks
 ```
+- Detailed Day 4 guide: `docs/day-4-lambda-setup.md`
+- DynamoDB IAM policy template: `aws/lambda-dynamodb-policy.json`
+- Lambda test event files:
+  - `aws/lambda-test-create-task.json`
+  - `aws/lambda-test-get-tasks.json`
 
 ## 3. IAM Permissions
 

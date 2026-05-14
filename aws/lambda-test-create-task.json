@@ -1,0 +1,9 @@
+{
+  "requestContext": {
+    "http": {
+      "method": "POST"
+    }
+  },
+  "body": "{\"userId\":\"demo-student\",\"title\":\"Create Lambda backend\",\"description\":\"Test Lambda function with DynamoDB table\",\"status\":\"In Progress\",\"deadline\":\"2026-05-20\"}"
+}
+
