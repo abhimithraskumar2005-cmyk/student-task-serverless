@@ -1,0 +1,21 @@
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+
+# Local-only files
+.env
+.env.local
+

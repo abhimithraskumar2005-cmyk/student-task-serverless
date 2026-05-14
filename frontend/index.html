@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Task Cloud Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Serverless AWS Capstone</p>
+          <h1>Student Task Cloud Tracker</h1>
+        </div>
+        <div class="mode-pill" id="modePill">Local Demo Mode</div>
+      </section>
+
+      <section class="stats-grid" aria-label="Task summary">
+        <article class="stat-card">
+          <span>Total</span>
+          <strong id="totalCount">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Pending</span>
+          <strong id="pendingCount">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>In Progress</span>
+          <strong id="progressCount">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Completed</span>
+          <strong id="completedCount">0</strong>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <form class="task-form" id="taskForm">
+          <h2>Add Task</h2>
+          <label>
+            Title
+            <input id="titleInput" name="title" type="text" placeholder="Example: Complete Lambda API" required />
+          </label>
+          <label>
+            Description
+            <textarea id="descriptionInput" name="description" placeholder="Short task details" rows="4"></textarea>
+          </label>
+          <div class="form-row">
+            <label>
+              Status
+              <select id="statusInput" name="status">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+              </select>
+            </label>
+            <label>
+              Deadline
+              <input id="deadlineInput" name="deadline" type="date" />
+            </label>
+          </div>
+          <button type="submit">Save Task</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+
+        <section class="task-panel">
+          <div class="panel-header">
+            <h2>Tasks</h2>
+            <button class="ghost-button" id="refreshButton" type="button">Refresh</button>
+          </div>
+          <div class="task-list" id="taskList"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+

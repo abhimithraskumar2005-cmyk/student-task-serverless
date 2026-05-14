@@ -1,0 +1,90 @@
+# AWS Setup Checklist
+
+## 1. DynamoDB
+
+- Create table name: `StudentTasks`
+- Partition key: `userId` as String
+- Sort key: `taskId` as String
+- Use on-demand capacity
+
+## 2. Lambda
+
+- Runtime: Python 3.12 or Python 3.11
+- Handler: `tasks.handler`
+- Upload code from `backend/lambda/tasks.py`
+- Environment variable:
+
+```text
+TABLE_NAME=StudentTasks
+```
+
+## 3. IAM Permissions
+
+Lambda execution role needs:
+
+- `dynamodb:PutItem`
+- `dynamodb:Query`
+- `dynamodb:UpdateItem`
+- `dynamodb:DeleteItem`
+- `logs:CreateLogGroup`
+- `logs:CreateLogStream`
+- `logs:PutLogEvents`
+
+Use least privilege by limiting DynamoDB permissions to the `StudentTasks` table ARN.
+
+## 4. API Gateway
+
+Create routes:
+
+```text
+POST /tasks
+GET /tasks
+PUT /tasks/{taskId}
+DELETE /tasks/{taskId}
+OPTIONS /tasks
+OPTIONS /tasks/{taskId}
+```
+
+Enable CORS:
+
+```text
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type,Authorization
+Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE
+```
+
+## 5. Frontend API URL
+
+After API Gateway deployment, copy the invoke URL and update:
+
+```js
+const API_BASE_URL = "https://your-api-id.execute-api.ap-south-1.amazonaws.com";
+```
+
+This line is in:
+
+```text
+frontend/app.js
+```
+
+## 6. S3 Hosting
+
+- Create S3 bucket
+- Upload `frontend/index.html`, `frontend/styles.css`, and `frontend/app.js`
+- Enable static website hosting or use CloudFront origin
+
+## 7. CloudFront
+
+- Create distribution
+- Origin: S3 bucket
+- Viewer protocol policy: Redirect HTTP to HTTPS
+- Default root object: `index.html`
+
+## 8. CloudWatch
+
+Capture screenshots of:
+
+- Lambda logs
+- API Gateway metrics
+- Lambda invocation/error metrics
+
