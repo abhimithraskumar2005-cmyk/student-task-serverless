@@ -6,6 +6,8 @@
 - Partition key: `userId` as String
 - Sort key: `taskId` as String
 - Use on-demand capacity
+- Detailed Day 3 guide: `docs/day-3-dynamodb-setup.md`
+- CLI input file: `aws/dynamodb-create-table.json`
 
 ## 2. Lambda
 
@@ -87,4 +89,3 @@ Capture screenshots of:
 - Lambda logs
 - API Gateway metrics
 - Lambda invocation/error metrics
-

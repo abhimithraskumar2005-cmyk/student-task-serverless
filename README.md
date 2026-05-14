@@ -88,3 +88,4 @@ By default, it runs in local demo mode using browser storage. After AWS API Gate
 - Architecture: `docs/architecture.md`
 - GitHub upload steps: `docs/github-upload-steps.md`
 - Viva preparation: `docs/viva-explanation.md`
+- DynamoDB setup: `docs/day-3-dynamodb-setup.md`
