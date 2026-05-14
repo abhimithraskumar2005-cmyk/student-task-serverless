@@ -60,6 +60,8 @@ Access-Control-Allow-Headers: Content-Type,Authorization
 Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE
 ```
 
+Detailed Day 5 guide: `docs/day-5-api-gateway-setup.md`
+
 ## 5. Frontend API URL
 
 After API Gateway deployment, copy the invoke URL and update:
