@@ -1,4 +1,4 @@
-const API_BASE_URL = "";
+const API_BASE_URL = "https://y93vfcqzw1.execute-api.ap-south-1.amazonaws.com";
 const DEMO_USER_ID = "demo-student";
 const STORAGE_KEY = "student-task-cloud-tracker";
 
@@ -226,4 +226,3 @@ taskList.addEventListener("click", async (event) => {
 refreshButton.addEventListener("click", refreshTasks);
 
 refreshTasks();
-
