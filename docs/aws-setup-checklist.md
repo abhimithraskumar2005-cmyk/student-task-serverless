@@ -80,6 +80,14 @@ Detailed Day 5 guide: `docs/day-5-api-gateway-setup.md`
 - Set default root object to `index.html`
 - Detailed Day 8 guide: `docs/day-8-cloudfront-setup.md`
 
+## 7. CloudWatch Monitoring
+
+- Capture Lambda log group and latest log events
+- Capture Lambda monitor metrics
+- Capture API Gateway metrics
+- Capture CloudFront metrics
+- Detailed Day 9 guide: `docs/day-9-cloudwatch-monitoring.md`
+
 ## 5. Frontend API URL
 
 After API Gateway deployment, copy the invoke URL and update:
