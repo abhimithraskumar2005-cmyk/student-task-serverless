@@ -62,6 +62,16 @@ Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE
 
 Detailed Day 5 guide: `docs/day-5-api-gateway-setup.md`
 
+## 5. S3 Static Website Hosting
+
+- Create a general purpose S3 bucket
+- Upload frontend files: `index.html`, `styles.css`, `app.js`
+- Enable static website hosting
+- Set index document to `index.html`
+- Add public read bucket policy
+- Detailed Day 7 guide: `docs/day-7-s3-frontend-deployment.md`
+- Bucket policy template: `aws/s3-public-read-policy-template.json`
+
 ## 5. Frontend API URL
 
 After API Gateway deployment, copy the invoke URL and update:

@@ -92,3 +92,4 @@ By default, it runs in local demo mode using browser storage. After AWS API Gate
 - Lambda setup: `docs/day-4-lambda-setup.md`
 - API Gateway setup: `docs/day-5-api-gateway-setup.md`
 - Frontend API connection: `docs/day-6-frontend-api-connection.md`
+- S3 frontend deployment: `docs/day-7-s3-frontend-deployment.md`
