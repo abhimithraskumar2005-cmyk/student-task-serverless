@@ -72,6 +72,14 @@ Detailed Day 5 guide: `docs/day-5-api-gateway-setup.md`
 - Detailed Day 7 guide: `docs/day-7-s3-frontend-deployment.md`
 - Bucket policy template: `aws/s3-public-read-policy-template.json`
 
+## 6. CloudFront CDN
+
+- Create CloudFront distribution
+- Use S3 website endpoint as origin
+- Set viewer protocol policy to redirect HTTP to HTTPS
+- Set default root object to `index.html`
+- Detailed Day 8 guide: `docs/day-8-cloudfront-setup.md`
+
 ## 5. Frontend API URL
 
 After API Gateway deployment, copy the invoke URL and update:
